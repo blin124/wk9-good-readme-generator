@@ -1,66 +1,8 @@
+module.exports = require('./utils/generateMarkdown.js');
+
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
-
-function template({name, title, subTitle, description, usage, license, contributors, testInstall,  testConduct, userToKnow, userContributeToKnow}) {  
-
-    return `
-    https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
-
-    | ** Contents of Project ** |
-    | Project Title |
-    | Description   |
-    | Installation  |
-    | Usage         |
-    | License       |
-    | Contributing  |
-    | Tests         |
-    | Questions     |
-
-    # ${title}
-
-    > ${subTitle} 
-
-    > ${description}
-
-    ** Badges
-    - badge
-    - npm package
-    - issues
-
-    ## Screenshots of project / Gifs of project:
-    - ${screenshotsOrGifs}
-
-    ## Usage
-    ${usage}
-
-    ## Contributors
-    - ${contributors}
-
-    ---
-
-    ## Installation dependencies
-    > $${testInstall}
-    ### Test run command
-    > $${testConduct}
-
-    ---
-
-    > User Necessary Knowledge
-    ${userToKnow}
-    ${userContributeToKnow}
-
-    ---
-
-    ## License
-    - ${license}
-
-    ---
-
-    ## Copyright
-    @ Copyright ${copyright}
-    `
-}
 
 function getUser(username) {
     return axios
@@ -79,6 +21,11 @@ function askUser() {
             type: "input",
             message: "What is your Github username?", 
             name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your Github email address?",
+            name: "email",
         },
         {
             type: "input",
@@ -116,7 +63,7 @@ function askUser() {
             name: "contributors",
         },   
         {   type: "input",
-            message: "What command should be run to install dependencies? (npm install)",
+            message: "What command should be run to install dependencies?",
             default: "npm install",
             name: "testInstall",
         },   
@@ -142,20 +89,27 @@ function askUser() {
         .then((inquirerResponses) => {
         console.log(inquirerResponses)
         getUser(inquirerResponses.name)
+        })
         .then((githubResponse) => {
             console.log(githubResponse.data.avatar_url);
         })
-})
-
 }
 
 function generateReadme(userResponse) {
     // generate the readme and return a string
+
 }
 
 
-function writeToFile(fileName, data) {
+function writeToFile(file, data) {
     // use package fs 
+     generateMarkdown(data);
+    fs.writefileName('READMEreal.md', file, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Success!");
+    })
 }
 
 function firstThing() {
