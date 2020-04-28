@@ -1,13 +1,16 @@
-function generateMarkdown({name, email, title, subTitle, description, usage, license, contributors, testInstall,  testConduct, userToKnow, userContributeToKnow}) {  
+function generateMarkdown({name, email, avatar_url, title, subTitle, description, screenshotsOrGifs, usage, license, contributors, testInstall,  testConduct, userToKnow, userContributeToKnow, copyright}) {  
 
   return `
-  https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
-
   # Github
   > Username: ${name}
   > Email: ${email}
+  ---
+  > Gihub Profile Picture:
+  ${avatar_url}
 
-  | ** Contents of Project ** |
+  ---
+  
+  > Contents of Project
   | Project Title |
   | Description   |
   | Installation  |
@@ -23,11 +26,6 @@ function generateMarkdown({name, email, title, subTitle, description, usage, lic
 
   > ${description}
 
-  ** Badges
-  - badge
-  - npm package
-  - issues
-
   ## Screenshots of project / Gifs of project:
   - ${screenshotsOrGifs}
 
@@ -40,9 +38,11 @@ function generateMarkdown({name, email, title, subTitle, description, usage, lic
   ---
 
   ## Installation dependencies
-  > $${testInstall}
+  https://img.shields.io/badge/<npm>-<${testInstall}>-<green> 
+  > $ ${testInstall}
   ### Test run command
-  > $${testConduct}
+  https://img.shields.io/badge/<tests>-<${testConduct}>-<brightgreen> 
+  > $ ${testConduct}
 
   ---
 
@@ -53,12 +53,15 @@ function generateMarkdown({name, email, title, subTitle, description, usage, lic
   ---
 
   ## License
+  https://img.shields.io/badge/<license>-<${license}>-<gold>
   - ${license}
 
   ---
 
   ## Copyright
   @ Copyright ${copyright}
+  https://img.shields.io/badge/<copyright>-<${copyright}>-<blue>
+
   `
 }
 

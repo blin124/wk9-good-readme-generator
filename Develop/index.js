@@ -1,13 +1,15 @@
-module.exports = require('./utils/generateMarkdown.js');
+generateMarkdown = require('./utils/generateMarkdown.js');
 
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 
-function getUser(username) {
+let responses = {};
+
+function getUser(name) {
     return axios
         .get(
-        `https://api.github.com/users/${username}`
+        `https://api.github.com/users/${name}`
         )
         .catch(err => {
         console.log(`User not found`);
@@ -88,23 +90,23 @@ function askUser() {
         ])
         .then((inquirerResponses) => {
         console.log(inquirerResponses)
+        responses = inquirerResponses
         getUser(inquirerResponses.name)
-        })
         .then((githubResponse) => {
-            console.log(githubResponse.data.avatar_url);
-        })
+            console.log(githubResponse);
+            // console.log(githubResponse.data.avatar_url);
+            responses.email = githubResponse.data.email
+            responses.avatar_url = githubResponse.data.avatar_url
+            console.log(responses);
+            var generatedReadme = generateMarkdown(responses);
+            writeToFile('README.md', generatedReadme);
+        })})
+
 }
-
-function generateReadme(userResponse) {
-    // generate the readme and return a string
-
-}
-
 
 function writeToFile(file, data) {
     // use package fs 
-     generateMarkdown(data);
-    fs.writefileName('READMEreal.md', file, function(err) {
+    fs.writeFile(file , data, function(err) {
         if (err) {
             return console.log(err);
         }
@@ -118,5 +120,6 @@ function firstThing() {
     writeToFile('README.md', generatedReadme);
 }
 
-firstThing();
+//firstThing();
+askUser()
 
