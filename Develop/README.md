@@ -44,7 +44,7 @@
 
   ### User Necessary Knowledge
   This repository shows files that can assist the user to create their own README.md file with the given layout. In order to use generator, the user should fill out the prompts shown through node.js and must have installed npm inquirer and axios.
-  The user must know that this README.md generator can constantly create README.md files.
+  The user must know that this README.md generator will overwrite any previous files with the name README.md file created.
 
   ---
 
