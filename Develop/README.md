@@ -23,7 +23,7 @@
   > This is a JS file created to produce a README.md file generator accordingly to the user's responses along with the user's profile picture through their Github user account.
 
   ## Screenshots of project / Gifs of project:
-  ![Image description](../Screenshot/shot-one.png)
+  ![Image description](../../Screenshot/shot-one.png)
 
   ## Usage
   - To allow simple creations of README files for any user.
@@ -34,10 +34,10 @@
   ---
 
   ## Installation dependencies
-  https://img.shields.io/badge/npm-npm install-green
+  https://img.shields.io/badge/npm-npminstall-green
   > $ npm install
   ### Test run command
-  https://img.shields.io/badge/tests-npm test-brightgreen
+  https://img.shields.io/badge/tests-npmtest-brightgreen
   > $ npm test
 
   ---
@@ -56,6 +56,6 @@
 
   ## Copyright
   @ Copyright 2020 Cynthia Zhou
-  https://img.shields.io/badge/copyright-2020 Cynthia Zhou-blue
+  https://img.shields.io/badge/copyright-2020CynthiaZhou-blue
 
   
