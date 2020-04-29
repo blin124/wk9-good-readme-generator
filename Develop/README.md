@@ -4,7 +4,7 @@
   > Username: blin124
   
   > Gihub Profile Picture:
-  https://avatars0.githubusercontent.com/u/60638148?v=4
+  [blin124](https://avatars0.githubusercontent.com/u/60638148?v=4)
 
   ## Contents of Project
   | Project Title |
@@ -23,7 +23,7 @@
   > This is a JS file created to produce a README.md file generator accordingly to the user's responses along with the user's profile picture through their Github user account.
 
   ## Screenshots of project / Gifs of project:
-  ![Image description](../../Screenshot/shot-one.png)
+  ![Image description](/Screenshot/shot-one.png)
 
   ## Usage
   - To allow simple creations of README files for any user.
@@ -34,10 +34,10 @@
   ---
 
   ## Installation dependencies
-  https://img.shields.io/badge/npm-npminstall-green
+  [Badge](https://img.shields.io/badge/npm-npminstall-green)
   > $ npm install
   ### Test run command
-  https://img.shields.io/badge/tests-npmtest-brightgreen
+  [Badge](https://img.shields.io/badge/tests-npmtest-brightgreen)
   > $ npm test
 
   ---
@@ -49,13 +49,13 @@
   ---
 
   ## License
-  https://img.shields.io/badge/license-N/A-gold
+  [Badge](https://img.shields.io/badge/license-N/A-gold)
   - N/A
 
   ---
 
   ## Copyright
   @ Copyright 2020 Cynthia Zhou
-  https://img.shields.io/badge/copyright-2020CynthiaZhou-blue
+  [Badge](https://img.shields.io/badge/copyright-2020CynthiaZhou-blue)
 
   
