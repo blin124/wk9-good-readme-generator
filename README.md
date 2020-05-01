@@ -55,7 +55,7 @@
   ---
 
   ## Copyright
-  @ Copyright 2020 Cynthia Zhou
+ © Copyright 2020 Cynthia Zhou
   [Badge](https://img.shields.io/badge/copyright-2020CynthiaZhou-blue)
 
   
