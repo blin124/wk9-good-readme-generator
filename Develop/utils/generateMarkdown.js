@@ -57,7 +57,7 @@ function generateMarkdown({name, email, avatar_url, title, subTitle, description
   ---
 
   ## Copyright
-  @ Copyright ${copyright}
+  © Copyright ${copyright}
   [https://img.shields.io/badge/copyright-${copyright}-blue]
 
   `
