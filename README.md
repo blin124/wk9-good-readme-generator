@@ -6,15 +6,17 @@
   > Gihub Profile Picture:
   [blin124](https://avatars0.githubusercontent.com/u/60638148?v=4)
 
+  ---
+
   ## Contents of Project
-  | Project Title |
-  | Description   |
-  | Installation  |
-  | Usage         |
-  | License       |
-  | Contributing  |
-  | Tests         |
-  | Questions     |
+ * Project Title
+ * Description  
+ * Installation 
+ * Usage        
+ * License      
+ * Contributing 
+ * Tests        
+ * Questions    
 
   # README.md Generator
 
@@ -34,10 +36,10 @@
   ---
 
   ## Installation dependencies
-  [Badge](https://img.shields.io/badge/npm-npminstall-green)
+   ![alt-text](https://img.shields.io/badge/npm-npminstall-green)
   > $ npm install
   ### Test run command
-  [Badge](https://img.shields.io/badge/tests-npmtest-brightgreen)
+   ![alt-text](https://img.shields.io/badge/tests-npmtest-brightgreen)
   > $ npm test
 
   ---
@@ -49,13 +51,18 @@
   ---
 
   ## License
-  [Badge](https://img.shields.io/badge/license-N/A-gold)
+  ![alt-text](https://img.shields.io/badge/license-N/A-gold)
   - N/A
 
   ---
 
   ## Copyright
  © Copyright 2020 Cynthia Zhou
-  [Badge](https://img.shields.io/badge/copyright-2020CynthiaZhou-blue)
+  
+  ![alt-text](https://img.shields.io/badge/copyright-2020CynthiaZhou-blue)
 
   
+|   dwadw   |   dwadwa |
+|:---:|:---:|
+| heyryo |   sds   |
+| heyryo | 
